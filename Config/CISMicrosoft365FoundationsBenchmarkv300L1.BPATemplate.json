@@ -1,0 +1,19 @@
+{
+  "name": "CIS Microsoft 365 Foundations Benchmark v3.0.0 (L1)",
+  "style": "Tenant",
+  "Fields": [
+    {
+      "name": "1.1.3: Ensure that between two and four global admins are designated",
+      "UseExistingInfo": true,
+      "FrontendFields": [
+        {
+          "name": "Number of GA",
+          "value": "NumberOfGlobalAdministrators",
+          "formatter": "number"
+        },
+        {}
+      ],
+      "desc": "More than one global administrator should be designated so a single admin can be monitored and to provide redundancy should a single admin leave an organization. Additionally, there should be no more than four global admins set for any tenant. Ideally global administrators will have no licenses assigned to them."
+    }
+  ]
+}
