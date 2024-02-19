@@ -13,6 +13,7 @@
         }
       ],
       "StoreAs": "JSON",
+      "API": "Graph",
       "ExtractFields": [
         "reportRefreshDate",
         "siteType",
@@ -20,7 +21,7 @@
         "reportDate",
         "reportPeriod"
       ],
-      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
     }
   ]
 }
