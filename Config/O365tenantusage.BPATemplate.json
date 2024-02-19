@@ -3,12 +3,12 @@
   "style": "Tenant",
   "Fields": [
     {
-      "name": "value",
+      "name": "getSharePointSiteUsageStorage",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
           "name": "SharePoint Storage",
-          "value": "value.storageUsedInBytes",
+          "value": "getSharePointSiteUsageStorage",
           "formatter": "string"
         }
       ],
