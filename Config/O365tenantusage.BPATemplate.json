@@ -8,12 +8,17 @@
       "FrontendFields": [
         {
           "name": "SharePoint Storage",
-          "value": "storageUsedInBytes"
+          "value": "storageUsedInBytes",
+          "formatter": "table"
         }
       ],
       "StoreAs": "JSON",
       "ExtractFields": [
-        "storageUsedInBytes"
+        "reportRefreshDate",
+        "siteType",
+        "storageUsedInBytes",
+        "reportDate",
+        "reportPeriod"
       ],
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     }
