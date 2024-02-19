@@ -3,13 +3,13 @@
   "style": "Tenant",
   "Fields": [
     {
-      "name": "sharepointstorage",
+      "name": "value",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
           "name": "SharePoint Storage",
-          "value": "storageUsedInBytes",
-          "formatter": "table"
+          "value": "value.storageUsedInBytes",
+          "formatter": "string"
         }
       ],
       "StoreAs": "JSON",
@@ -21,7 +21,7 @@
         "reportDate",
         "reportPeriod"
       ],
-      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     }
   ]
 }
