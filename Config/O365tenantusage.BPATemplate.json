@@ -6,11 +6,16 @@
       "name": "sharepointstorage",
       "UseExistingInfo": false,
       "FrontendFields": [
-        {}
+        {
+          "name": "SharePoint Storage",
+          "value": "storageUsedInBytes"
+        }
       ],
       "StoreAs": "JSON",
-      "ExtractFields": [],
-      "URL": "https://graph.microsoft.com/v1.0/reports/getSharePointSiteUsageStorage(period='D7')"
+      "ExtractFields": [
+        "storageUsedInBytes"
+      ],
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     }
   ]
 }
