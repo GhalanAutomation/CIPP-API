@@ -3,28 +3,6 @@
   "style": "Tenant",
   "Fields": [
     {
-      "name": "deviceregister",
-      "UseExistingInfo": false,
-      "FrontendFields": [
-        {
-          "name": "Device Register",
-          "value": "deviceregister",
-          "desc": "These are all devices found in M365 to add to your CE Device Register.",
-          "formatter": "table"
-        }
-      ],
-      "StoreAs": "JSON",
-      "API": "Graph",
-      "ExtractFields": [
-        "deviceName",
-        "lastSyncDateTime",
-        "osVersion",
-        "userPrincipalName",
-        "complianceState"
-      ],
-      "URL": "https://graph.microsoft.com/beta/deviceManagement/managedDevices"
-    },
-    {
       "name": "adminsTable",
       "UseExistingInfo": false,
       "FrontendFields": [
