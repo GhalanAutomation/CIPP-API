@@ -1,5 +1,5 @@
 {
-  "name": "O365 tenant usage",
+  "name": "Commercial- O365 tenant usage",
   "style": "Tenant",
   "Fields": [
     {
@@ -14,9 +14,7 @@
       ],
       "StoreAs": "JSON",
       "API": "Graph",
-      "ExtractFields": [
-        "storageUsedInBytes"
-      ],
+      "ExtractFields": ["storageUsedInBytes"],
       "parameters": {
         "asApp": true
       },
