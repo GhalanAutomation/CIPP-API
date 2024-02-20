@@ -1,14 +1,14 @@
 {
-  "name": "CIS",
+  "name": "CIS MS365 Benchmark (3.0.0)(L1) - Tenant View",
   "style": "Tenant",
   "Fields": [
     {
-      "name": "adminsTable",
+      "name": "GATable",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
           "name": "Users 1.1.3",
-          "value": "adminsTable",
+          "value": "GATable",
           "desc": "Ensure that between two and four global admins are designated.",
           "formatter": "table"
         }
