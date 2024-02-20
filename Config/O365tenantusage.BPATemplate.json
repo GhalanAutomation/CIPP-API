@@ -1,5 +1,5 @@
 {
-  "name": "Commercial- O365 tenant usage",
+  "name": "Commercial - O365 tenant usage",
   "style": "Tenant",
   "Fields": [
     {
@@ -12,12 +12,10 @@
           "formatter": "string"
         }
       ],
+      "where": "$_.reportDate.Date -eq (Get-Date).Date",
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
-      "parameters": {
-        "asApp": true
-      },
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
     }
   ]
