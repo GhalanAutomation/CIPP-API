@@ -3,12 +3,12 @@
   "style": "Tenant",
   "Fields": [
     {
-      "name": "globalAdmins",
+      "name": "adminsTable",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
           "name": "Users 1.1.3",
-          "value": "globalAdmins",
+          "value": "adminsTable",
           "desc": "Ensure that between two and four global admins are designated.",
           "formatter": "table"
         }
