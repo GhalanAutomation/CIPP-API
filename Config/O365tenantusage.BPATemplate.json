@@ -1,0 +1,26 @@
+{
+  "name": "O365 tenant usage",
+  "style": "Tenant",
+  "Fields": [
+    {
+      "name": "getSharePointSiteUsageStorage",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "SharePoint Storage",
+          "value": "getSharePointSiteUsageStorage",
+          "formatter": "string"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": [
+        "storageUsedInBytes"
+      ],
+      "parameters": {
+        "asApp": true
+      },
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
+    }
+  ]
+}
