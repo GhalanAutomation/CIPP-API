@@ -1,5 +1,5 @@
 {
-  "name": "CIS Microsoft 365 Foundations Benchmark v3.0.0 (L1) - Tenant View",
+  "name": "CIS",
   "style": "Tenant",
   "Fields": [
     {
@@ -7,9 +7,9 @@
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "Global admins list (Between 2 & 4)",
+          "name": "Global Admins List",
           "value": "globalAdminsList",
-          "desc": "1.1.3: Ensure that between two and four global admins are designated",
+          "desc": "Ensure that between two and four global admins are designated",
           "formatter": "table"
         }
       ],
