@@ -23,10 +23,14 @@
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "SharePoint Storage",
-          "desc": "Get SharePoint total totage usage",
-          "value": "getSharePointSiteUsageStorage",
-          "formatter": "table"
+          "name": "Date",
+          "value": "getSharePointSiteUsageStorage[0].reportDate",
+          "formatter": "string"
+        },
+        {
+          "name": "SharePoint Storage ",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 1000000000",
+          "formatter": "number"
         }
       ],
       "StoreAs": "JSON",
