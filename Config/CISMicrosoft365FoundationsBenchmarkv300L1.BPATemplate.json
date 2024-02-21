@@ -77,7 +77,7 @@
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "List of SharedMailbox with Sign-in enable",
+          "name": "1.2.2 Teams & Groups[DEV]",
           "desc": "Ensure sign-in to shared mailboxes is blocked",
           "value": "getSharedMailboxEnabled",
           "formatter": "table"
