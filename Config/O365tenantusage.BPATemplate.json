@@ -25,8 +25,9 @@
         {
           "name": "SharePoint Storage (Gb)",
           "desc": "Total storage in Gigabytes",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 100",
-          "formatter": "number"
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 1000000000",
+          "formatter": "math",
+          "showAs": "number"
         }
       ],
       "StoreAs": "JSON",
