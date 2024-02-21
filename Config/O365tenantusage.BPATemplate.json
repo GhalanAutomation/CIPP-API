@@ -3,6 +3,22 @@
   "style": "Tenant",
   "Fields": [
     {
+      "name": "adminsTable",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "1.1.3 Users",
+          "value": "adminsTable",
+          "desc": "Ensure that between two and four global admins are designated.",
+          "formatter": "table"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["displayName", "userPrincipalName"],
+      "URL": "https://graph.microsoft.com/beta/directoryRoles/roleTemplateId=62e90394-69f5-4237-9190-012177145e10/members"
+    },
+    {
       "name": "getSharePointSiteUsageStorage",
       "UseExistingInfo": false,
       "FrontendFields": [
@@ -18,23 +34,6 @@
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
-    },
-    {
-      "name": "getOneDriveUsageStorage",
-      "UseExistingInfo": false,
-      "FrontendFields": [
-        {
-          "name": "OneDrive Storage",
-          "desc": "Get OneDrive total totage usage",
-          "value": "getOneDriveUsageStorage",
-          "formatter": "number"
-        }
-      ],
-      "where": "$_.reportDate.Date -eq (Get-Date).Date",
-      "StoreAs": "JSON",
-      "API": "Graph",
-      "ExtractFields": ["storageUsedInBytes"],
-      "URL": "https://graph.microsoft.com/v1.0/reports/getOneDriveUsageStorage(period='D7')"
     }
   ]
 }
