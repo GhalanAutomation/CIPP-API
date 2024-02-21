@@ -71,6 +71,23 @@
         "defaultMFAMethod"
       ],
       "URL": "https://graph.microsoft.com/beta/reports/authenticationMethods/userRegistrationDetails"
+    },
+    {
+      "name": "getSharedMailboxEnabled",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "List of SharedMailbox with Sign-in enable",
+          "desc": "Ensure sign-in to shared mailboxes is blocked",
+          "value": "getSharedMailboxEnabled",
+          "formatter": "table"
+        }
+      ],
+      "where": "$_.AccountEnabled -eq $true",
+      "StoreAs": "JSON",
+      "API": "Exchange",
+      "Command": "Get-EXOMailbox -RecipientTypeDetails \"SharedMailbox\",\"RoomMailbox\",\"EquipmentMailbox\" | ForEach {Get-MgUser -UserId $_.ExternalDirectoryObjectId -Property AccountEnabled,DisplayName,Mail | Select DisplayName,Mail,AccountEnabled}",
+      "ExtractFields": ["DisplayName", "Mail", "AccountEnabled"]
     }
   ]
 }
