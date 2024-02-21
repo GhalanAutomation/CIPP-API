@@ -29,7 +29,6 @@
           "formatter": "table"
         }
       ],
-      "where": "$_.reportDate.Date -eq (Get-Date).Date",
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["reportDate", "storageUsedInBytes"],
