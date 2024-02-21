@@ -1,5 +1,5 @@
 {
-  "name": "Commercial - O365 tenant usage",
+  "name": "SALES - Tenant Storage usage - Tenant View",
   "style": "Tenant",
   "Fields": [
     {
@@ -8,11 +8,29 @@
       "FrontendFields": [
         {
           "name": "SharePoint Storage",
+          "desc": "Get SharePoint total totage usage",
           "value": "getSharePointSiteUsageStorage",
           "formatter": "string"
         }
       ],
-      "where": "$_.reportDate.Date -eq (Get-Date).Date",
+      "where": "$_.reportDate.Date -eq (Get-Date -Format \"yyyy-MM-dd\").Date",
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["storageUsedInBytes"],
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
+    },
+    {
+      "name": "getSharePointSiteUsageStorage",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "SharePoint Storage",
+          "desc": "Get SharePoint total totage usage",
+          "value": "getSharePointSiteUsageStorage",
+          "formatter": "string"
+        }
+      ],
+      "where": "$_.reportDate.Date -eq (Get-Date -Format \"yyyy-MM-dd\").Date",
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
