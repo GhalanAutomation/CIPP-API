@@ -23,19 +23,15 @@
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "Date",
-          "value": "getSharePointSiteUsageStorage[0].reportDate",
-          "formatter": "string"
-        },
-        {
-          "name": "SharePoint Storage ",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 1000000000",
+          "name": "SharePoint Storage (Go)",
+          "desc": "Total storage in Gigabytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
           "formatter": "number"
         }
       ],
       "StoreAs": "JSON",
       "API": "Graph",
-      "ExtractFields": ["reportDate", "storageUsedInBytes"],
+      "ExtractFields": ["storageUsedInBytes"],
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     }
   ]
