@@ -26,13 +26,13 @@
           "name": "SharePoint Storage",
           "desc": "Get SharePoint total totage usage",
           "value": "getSharePointSiteUsageStorage",
-          "formatter": "number"
+          "formatter": "table"
         }
       ],
       "where": "$_.reportDate.Date -eq (Get-Date).Date",
       "StoreAs": "JSON",
       "API": "Graph",
-      "ExtractFields": ["storageUsedInBytes"],
+      "ExtractFields": ["reportDate", "storageUsedInBytes"],
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
     }
   ]
