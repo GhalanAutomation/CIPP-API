@@ -10,31 +10,31 @@
           "name": "SharePoint Storage",
           "desc": "Get SharePoint total totage usage",
           "value": "getSharePointSiteUsageStorage",
-          "formatter": "string"
+          "formatter": "number"
         }
       ],
-      "where": "$_.reportDate.Date -eq (Get-Date -Format \"yyyy-MM-dd\").Date",
+      "where": "$_.reportDate.Date -eq (Get-Date).Date",
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
       "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
     },
     {
-      "name": "getSharePointSiteUsageStorage",
+      "name": "getOneDriveUsageStorage",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "SharePoint Storage",
-          "desc": "Get SharePoint total totage usage",
-          "value": "getSharePointSiteUsageStorage",
-          "formatter": "string"
+          "name": "OneDrive Storage",
+          "desc": "Get OneDrive total totage usage",
+          "value": "getOneDriveUsageStorage",
+          "formatter": "number"
         }
       ],
-      "where": "$_.reportDate.Date -eq (Get-Date -Format \"yyyy-MM-dd\").Date",
+      "where": "$_.reportDate.Date -eq (Get-Date).Date",
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
-      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')"
+      "URL": "https://graph.microsoft.com/v1.0/reports/getOneDriveUsageStorage(period='D7')"
     }
   ]
 }
