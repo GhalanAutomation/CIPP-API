@@ -25,17 +25,14 @@
         {
           "name": "SharePoint Storage (Gb)",
           "desc": "Total storage in Gigabytes",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 100",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
           "formatter": "math"
         }
       ],
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
-      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json",
-      "Parameters": {
-        "Nopagination": true
-      }
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     }
   ]
 }
