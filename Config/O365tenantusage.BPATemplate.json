@@ -3,24 +3,36 @@
   "style": "Tenant",
   "Fields": [
     {
-      "name": "adminsTable",
+      "name": "getSharePointSiteUsageStorage",
       "UseExistingInfo": false,
       "FrontendFields": [
         {
-          "name": "1.1.3 Users",
-          "value": "adminsTable",
-          "desc": "Ensure that between two and four global admins are designated.",
-          "formatter": "table"
+          "name": "SharePoint Storage (bytes)",
+          "desc": "Total storage in Bytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
+          "formatter": "string"
         }
       ],
       "StoreAs": "JSON",
       "API": "Graph",
-      "ExtractFields": ["displayName", "userPrincipalName"],
-      "URL": "https://graph.microsoft.com/beta/directoryRoles/roleTemplateId=62e90394-69f5-4237-9190-012177145e10/members"
+      "ExtractFields": ["storageUsedInBytes"],
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
     },
     {
       "name": "getSharePointSiteUsageStorage",
-      "UseExistingInfo": false,
+      "UseExistingInfo": true,
+      "FrontendFields": [
+        {
+          "name": "SharePoint Storage (Gb)",
+          "desc": "Total storage in Gigabytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
+          "formatter": "number"
+        }
+      ]
+    },
+    {
+      "name": "getSharePointSiteUsageStorage",
+      "UseExistingInfo": true,
       "FrontendFields": [
         {
           "name": "SharePoint Storage (Gb)",
@@ -28,11 +40,7 @@
           "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
           "formatter": "math"
         }
-      ],
-      "StoreAs": "JSON",
-      "API": "Graph",
-      "ExtractFields": ["storageUsedInBytes"],
-      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
+      ]
     }
   ]
 }
