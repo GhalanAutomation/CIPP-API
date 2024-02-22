@@ -1,5 +1,5 @@
 {
-  "name": "SALES - Tenant Storage usage - Tenant View",
+  "name": "Tenant Storage usage - Tenant View",
   "style": "Tenant",
   "Fields": [
     {
@@ -10,7 +10,7 @@
           "name": "SharePoint Storage (bytes)",
           "desc": "Total storage in Bytes",
           "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
-          "formatter": "string"
+          "formatter": "number"
         }
       ],
       "StoreAs": "JSON",
@@ -25,32 +25,8 @@
         {
           "name": "SharePoint Storage (Gb)",
           "desc": "Total storage in Gigabytes",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
-          "formatter": "number"
-        }
-      ]
-    },
-    {
-      "name": "getSharePointSiteUsageStorage",
-      "UseExistingInfo": true,
-      "FrontendFields": [
-        {
-          "name": "SharePoint Storage (Gb)",
-          "desc": "Total storage in Gigabytes",
           "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes /1000000000000",
           "formatter": "math"
-        }
-      ]
-    },
-    {
-      "name": "getSharePointSiteUsageStorage",
-      "UseExistingInfo": true,
-      "FrontendFields": [
-        {
-          "name": "SharePoint Storage (Gb)",
-          "desc": "Total storage in Gigabytes",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes /1000000000000",
-          "formatter": "number"
         }
       ]
     }
