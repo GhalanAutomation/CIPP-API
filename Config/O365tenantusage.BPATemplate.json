@@ -48,7 +48,7 @@
       "StoreAs": "JSON",
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
-      "URL": "https://graph.microsoft.com/beta/reports/getOneDriveUsageStorage(period='D7')?$format=application/json"
+      "URL": "https://graph.microsoft.com/beta/reports/getMailboxUsageStorage(period='D7')?$format=application/json"
     }
   ]
 }
