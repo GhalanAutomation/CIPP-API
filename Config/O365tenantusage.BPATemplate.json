@@ -11,6 +11,12 @@
           "desc": "Total storage in Bytes",
           "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
           "formatter": "number"
+        },
+        {
+          "name": "SharePoint: amount of storage used (bytes)",
+          "desc": "Total storage in Bytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / Math.pow(1024, 4)",
+          "formatter": "math"
         }
       ],
       "StoreAs": "JSON",
