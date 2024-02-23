@@ -25,9 +25,22 @@
         {
           "name": "SharePoint Storage (Gb)",
           "desc": "Total storage in Gigabytes",
-          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes/1000000000000",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 1000000000000",
           "formatter": "math",
           "showAs": "percentage"
+        }
+      ]
+    },
+    {
+      "name": "getSharePointSiteUsageStorage",
+      "UseExistingInfo": true,
+      "FrontendFields": [
+        {
+          "name": "SharePoint Storage (Gb)",
+          "desc": "Total storage in Gigabytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes / 1000000000000",
+          "formatter": "math",
+          "showAs": "number"
         }
       ]
     },
@@ -52,7 +65,8 @@
           "name": "SharePoint Storage (Gb)",
           "desc": "Total storage in Gigabytes",
           "value": "(getSharePointSiteUsageStorage[0].storageUsedInBytes) / 1000000000000",
-          "formatter": "math"
+          "formatter": "math",
+          "showAs": "number"
         }
       ]
     }
