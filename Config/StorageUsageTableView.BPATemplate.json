@@ -1,5 +1,5 @@
 {
-  "name": "Tenant Storage usage - Table View",
+  "name": "SALES - Storage usage - Table View",
   "style": "Table",
   "Fields": [
     {
@@ -33,6 +33,22 @@
       "API": "Graph",
       "ExtractFields": ["storageUsedInBytes"],
       "URL": "https://graph.microsoft.com/beta/reports/getOneDriveUsageStorage(period='D7')?$format=application/json"
+    },
+    {
+      "name": "getMailboxUsageMailboxCounts",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "Exchange: number of mailbox",
+          "desc": "Get the total number of user mailboxes in your organization",
+          "value": "getMailboxUsageMailboxCounts[0].total",
+          "formatter": "number"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["total"],
+      "URL": "https://graph.microsoft.com/beta/reports/getMailboxUsageMailboxCounts(period='D7')?$format=application/json"
     },
     {
       "name": "getExchangeSiteUsageStorage",
