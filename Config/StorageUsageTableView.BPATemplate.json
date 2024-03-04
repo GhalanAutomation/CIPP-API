@@ -1,0 +1,54 @@
+{
+  "name": "Tenant Storage usage - Tenant View",
+  "style": "Table",
+  "Fields": [
+    {
+      "name": "getSharePointSiteUsageStorage",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "SharePoint: amount of storage used (bytes)",
+          "desc": "Total storage in Bytes",
+          "value": "getSharePointSiteUsageStorage[0].storageUsedInBytes",
+          "formatter": "number"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["storageUsedInBytes"],
+      "URL": "https://graph.microsoft.com/beta/reports/getSharePointSiteUsageStorage(period='D7')?$format=application/json"
+    },
+    {
+      "name": "getOneDriveSiteUsageStorage",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "OneDrive: amount of storage (bytes)",
+          "desc": "Total storage in Bytes",
+          "value": "getOneDriveSiteUsageStorage[0].storageUsedInBytes",
+          "formatter": "number"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["storageUsedInBytes"],
+      "URL": "https://graph.microsoft.com/beta/reports/getOneDriveUsageStorage(period='D7')?$format=application/json"
+    },
+    {
+      "name": "getExchangeSiteUsageStorage",
+      "UseExistingInfo": false,
+      "FrontendFields": [
+        {
+          "name": "Exchange: amount of storage (bytes)",
+          "desc": "Total storage in Bytes",
+          "value": "getExchangeSiteUsageStorage[0].storageUsedInBytes",
+          "formatter": "number"
+        }
+      ],
+      "StoreAs": "JSON",
+      "API": "Graph",
+      "ExtractFields": ["storageUsedInBytes"],
+      "URL": "https://graph.microsoft.com/beta/reports/getMailboxUsageStorage(period='D7')?$format=application/json"
+    }
+  ]
+}
